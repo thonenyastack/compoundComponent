@@ -6,3 +6,5 @@ function Section({children,disabled}){
         </SectionContext.Provider>
     )    
 }
+
+export default Section;
