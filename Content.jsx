@@ -1,3 +1,4 @@
+import React from "react";
 function Content({children}){
     const {index, activeIndex} = useContext(AccordianContext);
     const isActive = index == activeIndex;

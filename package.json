@@ -5,8 +5,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "vite": "latest",
-    "@vitejs/plugin-react": "*"
+    "@vitejs/plugin-react": "*",
+    "vite": "^5.4.3"
   },
   "scripts": {
     "start": "vite",

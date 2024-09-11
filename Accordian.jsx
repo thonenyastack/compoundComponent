@@ -1,4 +1,9 @@
 import React, { useState, createContext, useContext } from 'react';
+import Content from './Content';
+import Description from './Description';
+import Section from './Section';
+import Title from './Title';
+
 const AccordianContext = createContext();
 function AccordianCC({children}){
     const [activeIndex, setActiveIndex] = useState(null);
@@ -19,30 +24,33 @@ function AccordianCC({children}){
     )
 }
 
-
+AccordianCC.Section = Section;
+AccordianCC.Title = Title;
+AccordianCC.Content = Content;
+AccordianCC.Description = Description;
 
 function Accordian(){
     return (
         <div className="App">
             <AccordianCC>
-                <Section>
-                    <Title><span>About Us</span></Title>
-                    <Content>
-                        <Description title="aboutus" />
-                    </Content>
-                </Section>
-                <Section>
-                    <Title><span>Contact Us</span></Title>
-                    <Content>
-                        <Description title="contactus" />
-                    </Content>
-                </Section>
-                <Section>
-                    <Title><span>Our Team</span></Title>
-                    <Content>
-                        <Description title="ourteam" />
-                    </Content>         
-                </Section>
+                <AccordianCC.Section>
+                    <AccordianCC.Title><span>About Us</span></AccordianCC.Title>
+                    <AccordianCC.Content>
+                        <AccordianCC.Description title="aboutus" />
+                    </AccordianCC.Content>
+                </AccordianCC.Section> 
+                <AccordianCC.Section>
+                    <AccordianCC.Title><span>Contact Us</span></AccordianCC.Title>
+                    <AccordianCC.Content>
+                        <AccordianCC.Description title="contactus" />
+                    </AccordianCC.Content>
+                </AccordianCC.Section> 
+                <AccordianCC.Section>
+                    <AccordianCC.Title><span>Our Team</span></AccordianCC.Title>
+                    <AccordianCC.Content>
+                        <AccordianCC.Description title="ourteam" />
+                    </AccordianCC.Content>
+                </AccordianCC.Section> 
             </AccordianCC>
         </div>
     )
