@@ -1,3 +1,4 @@
+import React,{useContext} from "react";
 function Title({ children }){
     const {index, activeIndex, setActiveIndex} = useContext(AccordianContext);
     const {disabled} = useContext(SectionContext);
